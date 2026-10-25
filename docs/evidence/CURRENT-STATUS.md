@@ -27,19 +27,21 @@ Historical load scenarios are not presented as fresh runs.
 - All 12 MUST captures are present. Strict checks also validate PNG integrity,
   dimensions and duplicate content. Remaining optional fault/HPA captures are optional.
 
-## Reproduction limitations
+## Local Docker reproduction
 
-This chat cannot access Docker's engine pipe. Session policy rejected sandbox
-escalation. The **new Compose Dockerfile build has not been run from this chat**.
-Its configuration validates, the existing Compose app passed 11 live API checks,
-and the original Dockerfile's hosted build/deploy succeeded. Run
-scripts/prepare-images.ps1 in a normal terminal to reproduce the new local build.
+The authorized elevated run of scripts/prepare-images.ps1 passed: the Compose
+Dockerfile build completed, both services became healthy, and shortly:v1,
+shortly:v2 and shortly:v2-bad-crash were built and imported into the Docker
+Desktop Kubernetes node. The helper streams the archive through binary stdin
+to avoid Windows Docker copy failures and PowerShell text transcoding. See
+windows/docker-build.txt and windows/compose-smoke.json. Earlier sandbox pipe
+restrictions were resolved for this run.
 
 The source overlay installs dependencies at pod startup and is a demonstration
 fallback, not the regular immutable release image. The full nine historical load
 scenarios were not rerun; their original suite failure and focused rerun remain
-reported honestly. No external challenge bonus is claimed. No changes have been
-pushed or submitted.
+reported honestly. No external challenge bonus is claimed. The changes are
+prepared on codex/windows-demo-evidence for a pull request to the original repo.
 
 ## Final quality checks
 
