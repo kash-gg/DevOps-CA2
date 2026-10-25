@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-10-25T06:49:51.448410+00:00",
+  "base": "http://127.0.0.1:8001",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "latency_ms": 151.89
+    },
+    {
+      "path": "/healthz",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "latency_ms": 10.73
+    },
+    {
+      "path": "/readyz",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "latency_ms": 6.97
+    },
+    {
+      "path": "/version",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "latency_ms": 4.21
+    },
+    {
+      "path": "/api/shorten",
+      "status": 201,
+      "expected": 201,
+      "pass": true,
+      "latency_ms": 110.22
+    },
+    {
+      "path": "/check-05800bc21d",
+      "status": 302,
+      "expected": 302,
+      "pass": true,
+      "latency_ms": 18.59
+    },
+    {
+      "path": "/api/links/check-05800bc21d/stats",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "latency_ms": 7.47
+    },
+    {
+      "path": "/api/shorten",
+      "status": 409,
+      "expected": 409,
+      "pass": true,
+      "latency_ms": 9.52
+    },
+    {
+      "path": "/api/shorten",
+      "status": 422,
+      "expected": 422,
+      "pass": true,
+      "latency_ms": 17.0
+    },
+    {
+      "path": "/api/shorten",
+      "status": 403,
+      "expected": 403,
+      "pass": true,
+      "latency_ms": 6.57
+    },
+    {
+      "path": "/metrics",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "latency_ms": 56.92
+    }
+  ],
+  "pass": true,
+  "error": null
+}
